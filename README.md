@@ -26,6 +26,8 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+Aplicação NestJs utilizando os conceitos Docker, Microservice com o RabbitMQ, CloundService com AWS Cognito e fazendo deploy no SCP Application Runtime.
+
 ## Installation
 
 ```bash

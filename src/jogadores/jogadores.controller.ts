@@ -12,8 +12,8 @@ export class JogadoresController {
   @Post()
   async criarAtualizarJogador(
     @Body() criarJogadorDto: CriarJogadorDto
-  ) {
-    await this.jogadoresService.criarAtualizarJogador(criarJogadorDto)
+  ): Promise<Jogador> {
+    return await this.jogadoresService.criarAtualizarJogador(criarJogadorDto)
   }
 
   @Get()
@@ -21,16 +21,16 @@ export class JogadoresController {
     @Query('email') email: string
   ): Promise<Jogador[] | Jogador> {
     if(email) {
-      return this.jogadoresService.consultarJogadorPorEmail(email)
+      return await this.jogadoresService.consultarJogadorPorEmail(email)
     }
-    return this.jogadoresService.consultarTodosJogadores()
+    return await this.jogadoresService.consultarTodosJogadores()
   }
 
   @Delete()
   async deletarJogador(
     @Query('email') email: string
-  ): Promise<void> {
-    this.jogadoresService.deletarJogador(email)
+  ): Promise<String> {
+    return await this.jogadoresService.deletarJogador(email)
   }
 
 }

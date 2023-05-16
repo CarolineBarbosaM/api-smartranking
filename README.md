@@ -24,8 +24,6 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 Aplicação NestJs utilizando os conceitos Docker, Microservice com o RabbitMQ, CloundService com AWS Cognito e fazendo deploy no SCP Application Runtime.
 
 ## Installation
@@ -73,3 +71,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.

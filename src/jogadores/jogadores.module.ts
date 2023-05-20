@@ -18,5 +18,6 @@ import { Model } from 'mongoose';
     JogadoresService,
     Model
   ],
+  exports: [JogadoresService],
 })
 export class JogadoresModule {}

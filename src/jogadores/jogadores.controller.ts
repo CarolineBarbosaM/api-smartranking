@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Post, Put, Query, Param, UsePipes, Valid
 import { CriarJogadorDto } from './dto/criar-jogador.dto';
 import { JogadoresService } from './jogadores.service';
 import { Jogador } from './interfaces/jogador.interface';
-import { JogadoresValidacaoParametrosPipe } from '../jogadores/pipes/jogadores-validacao-parametros.pipe';
+import { JogadoresValidacaoParametrosPipe } from '../common/pipes/jogadores-validacao-parametros.pipe';
 import { AtualizarJogadorDto } from './dto/atualizar-jogador.dto';
 
 @Controller('api/v1/jogadores')

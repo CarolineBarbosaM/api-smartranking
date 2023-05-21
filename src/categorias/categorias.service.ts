@@ -44,6 +44,21 @@ export class CategoriasService {
             .exec();
     }
 
+    async consultarCategoriaDoJogador(idJogador: any): Promise<Categoria> {
+        const jogadores = await this.jogadoresService.consultarTodosJogadores()
+        const jogadorFilter = jogadores.filter(jogador => jogador.id == idJogador)
+
+        if(jogadorFilter.length == 0) {
+            throw new BadRequestException(`O jogador não é um jogador.`)
+        }
+
+        return await this.categoriaModel
+            .findOne()
+            .where('jogadores')
+            .in(idJogador)
+            .exec()
+    }
+
     async consultarCategoriaPeloId(categoria: string): Promise<Categoria> {
         const categoriaEncontrado = await this.categoriaModel.findOne({ categoria }).exec();
 

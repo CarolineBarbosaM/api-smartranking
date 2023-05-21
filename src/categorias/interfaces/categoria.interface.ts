@@ -2,11 +2,10 @@ import { Document } from "mongoose";
 import { Jogador } from "src/jogadores/interfaces/jogador.interface";
 
 export interface Categoria extends Document {
-  readonly idcategoria: string;
+  readonly categoria: string;
   descricao: string;
   evento: Evento[];
   jogadores: Array<Jogador>;
-  urlFotoJogador: string;
 }
 
 export interface Evento {
